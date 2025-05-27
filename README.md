@@ -1,59 +1,67 @@
 # 📊 Raydium API Data Analytics (Solana)
 
-Ce projet a pour objectif de démontrer ma capacité à interagir avec une API REST, structurer des données financières issues de la blockchain Solana, et produire une première analyse à des fins exploratoires.
+This project aims to demonstrate my ability to interact with a REST API, structure financial data from the Solana blockchain, and perform an initial exploratory analysis.
 
 ---
 
-## 🔍 Objectifs
+## 🔍 Objectives
 
-- Extraire les données des pools de liquidité sur [Raydium](https://raydium.io/)
-- Transformer les données en DataFrame pour les analyser
-- Visualiser les top pools selon la TVL (Total Value Locked)
-
----
-
-## 🧠 Compétences démontrées
-
-- Requête API (`requests`)
-- Parsing de données JSON structurées
-- Manipulation de données avec `pandas`
-- Visualisation simple avec `matplotlib`
-- Structuration d’un projet Python exploitable
+- Extract liquidity pool data from [Raydium](https://raydium.io/)
+- Transform the data into a DataFrame for analysis
+- Visualize top pools based on TVL (Total Value Locked)
 
 ---
 
-## 📁 Description graphs
+## 🧠 Demonstrated Skills
 
-### 📊 Graphique 1 – Top 10 des pools par TVL (Total Value Locked)
+- API request handling with `requests`
+- Parsing structured JSON data
+- Data manipulation with `pandas`
+- Basic visualization with `matplotlib`
+- Structuring a usable and clear Python project
 
-Ce graphique présente les 10 pools de liquidité ayant la plus grande valeur totale.
-	•	L’axe X affiche les noms des pools, c’est-à-dire les paires de tokens (ex : SLERF/WSOL, WSOL/USDC).
-	•	L’axe Y indique la TVL, c’est-à-dire la valeur totale des deux tokens déposés, exprimée en dollars américains (USD).
+---
 
-💡 Interprétation :
-Une TVL élevée reflète souvent un intérêt important pour un token, une forte activité de trading, ou une confiance élevée de la communauté envers la paire.
-🕒 Remarque importante :
-Les valeurs affichées correspondent à un instantané pris au moment de l’appel API.
+## 📁 Graph Descriptions
 
-### 📊 Graphique 2 – Paires avec les tokens au prix unitaire le plus élevé
+### 📊 Graph 1 – Top 10 Pools by TVL (Total Value Locked)
 
-Ce graphique présente les 10 pools dont l’un des tokens a le prix unitaire le plus élevé, selon les données extraites de l’API Raydium.
+This graph displays the 10 liquidity pools with the highest total value.
 
-- L’axe **X** correspond aux **paires de tokens** (ex : `WSOL/Pnut`).
-- L’axe **Y** indique le **prix unitaire** (en dollars) du token dans la paire concernée.
+- The X-axis shows the names of the pools, i.e., token pairs (e.g., SLERF/WSOL, WSOL/USDC).
+- The Y-axis shows the TVL, i.e., the total value of both tokens deposited, expressed in USD.
 
-💡 **Interprétation :**  
-> Un prix élevé peut refléter soit un **token très valorisé par le marché**, soit un token à **faible offre.  
-> Ce graphique met en évidence les actifs qui possèdent la **valeur unitaire la plus élevée** sur la plateforme, même s’ils ne sont pas forcément les plus liquides ou les plus populaires.
+💡 Interpretation:  
+A high TVL often reflects strong market interest in a token, high trading activity, or strong community trust in the pair.
 
-### 📊 Graphique 3 – Tokens populaires à prix bas (TVL élevée + prix faible)
+🕒 Note:  
+The displayed values represent a snapshot taken at the time of the API call.
 
-Ce graphique met en évidence les tokens qui cumulent une **valeur unitaire faible** (moins de 0.01 $) et une **TVL élevée** (plus de 1 million de dollars).  
-Ces tokens sont souvent **accessibles au grand public**, fortement échangés, voire alimentés par des communautés actives.
+---
 
-💡 **Interprétation :**  
-> Ce type de profil correspond souvent à des **memecoins, shitcoins, qui peuvent représenter un fort potentiel spéculatif… mais aussi un niveau de risque élevé.
-📌 À propos du seuil de 1M $ de TVL : seuil minimum de TVL à 1 million de dollars** pour ne conserver que les pools présentant une liquidité significative.  
-Cela permet de filtrer :
-- Les pools peu actifs ou récents
-- Les tokens ayant peu d’engagement réel sur la plateforme
+### 📊 Graph 2 – Pairs with the Highest Unit Price Tokens
+
+This graph presents the 10 pools where one of the tokens has the highest unit price, based on data extracted from the Raydium API.
+
+- The **X-axis** shows the **token pairs** (e.g., `WSOL/Pnut`).
+- The **Y-axis** shows the **unit price** (in USD) of the token in the pair.
+
+💡 **Interpretation:**  
+> A high price can indicate either a **highly valued token** by the market or a **low supply token**.  
+> This graph highlights assets that have the **highest unit price** on the platform, even if they are not necessarily the most liquid or popular.
+
+---
+
+### 📊 Graph 3 – Popular Low-Priced Tokens (High TVL + Low Price)
+
+This graph highlights tokens that combine a **low unit price** (less than $0.01) with a **high TVL** (over $1 million).  
+These tokens are often **accessible to the general public**, heavily traded, and sometimes driven by active communities.
+
+💡 **Interpretation:**  
+> This profile often matches **memecoins or speculative assets**, which may offer high potential returns... but also come with high risk.
+
+📌 About the $1M TVL threshold:  
+A minimum TVL threshold of $1 million was set to retain only pools with significant liquidity.  
+This allows us to filter out:
+- Inactive or newly created pools
+- Tokens with little real engagement on the platform
